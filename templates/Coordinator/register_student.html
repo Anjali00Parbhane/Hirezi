@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block css %}
+   
+{% endblock %}
+{% block body %}
+    <h1>Student Registration</h1>
+    <div class="container">
+
+    <form action="{% url 'register_student' %}" method="POST">
+        {% csrf_token %}
+        <div class="col-sm-11">
+            <div class="col-sm-11">
+               <div class="form-group">
+                  <label>Student Name</label>
+                  <input type="text" class="form-control" name="first_name" >
+               </div>
+            </div>
+            <div class="col-sm-11">
+               <div class="form-group">
+                  <label>Department</label>
+                  <input type="text" class="form-control" name="department" >
+               </div>
+            </div>
+            <div class="col-sm-11">
+               <div class="form-group">
+                  <label>Course Year</label>
+                  <input type="text" class="form-control" name="course_year" >
+               </div>
+            </div>
+            <div class="col-sm-11">
+               <div class="form-group">
+                  <label>Serial No</label>
+                  <input type="number" class="form-control" name="college_serial_no" >
+               </div>
+            </div>
+            <div class="col-sm-11">
+               <div class="form-group">
+                  <label>Projects</label>
+                  <input type="number" class="form-control" name="no_of_projects" >
+               </div>
+            </div>
+            <div class="col-sm-11">
+               <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" class="form-control" name="email">
+               </div>
+            </div>
+            
+            <div class="col-sm-11">
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" name="password">
+                  </div>
+            </div>
+               <br>
+               <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Add Student</button>
+               </div>
+            </div>
+        </div>
+</form>
+</div>
+{% endblock %}

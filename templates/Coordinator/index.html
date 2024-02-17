@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block css %} {% endblock %} {% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="{% url 'register_student' %}">Register student</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'register_mentor' %}">Register mentor</a>
+    </div>
+  </div>
+  <div>{% endblock %}</div>
+</div>

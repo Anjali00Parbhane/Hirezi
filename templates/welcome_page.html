@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% block css %}
+   
+{% endblock %}
+
+{% block title %}Welcome{% endblock %}
+{% block body %}
+   <h1>welcome</h1>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <a href="{% url 'register_college' %}">Register college</a>
+          </div>
+          <div class="col">
+            <a href="{% url 'login' %} ">Login</a>
+          </div>
+        </div>
+   <div>
+{% endblock %}
+
